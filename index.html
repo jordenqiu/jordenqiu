@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黄仁勋最新访谈 - 邱东的投资观点分享">
+    <title>黄仁勋访谈 - 投资观点分享 | 邱东</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .video-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .video-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .video-title::before {
+            content: "🎬";
+            font-size: 28px;
+        }
+        
+        .video-iframe {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .video-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .video-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .video-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .content-section {
+            padding: 40px 30px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: "💡";
+            font-size: 26px;
+        }
+        
+        .viewpoint {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8edf3 100%);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #2c3e50;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .viewpoint:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .viewpoint::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .viewpoint-label {
+            font-weight: bold;
+            color: #667eea;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        
+        .author-section {
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .author-details h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .author-details p {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .share-section {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .share-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .share-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .content-section {
+                padding: 30px 20px;
+            }
+            
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .share-section {
+                justify-content: center;
+            }
+        }
+        
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            animation: slideIn 0.3s ease-out;
+            z-index: 1000;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="copy-notification" id="copyNotification">
+        ✅ 链接已复制到剪贴板！
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>黄仁勋最新访谈：未来的投资应该在哪里？</h1>
+            <p>邱东的投资观点分享 · 2025年10月</p>
+        </div>
+        
+        <div class="main-card">
+            <div class="video-section">
+                <div class="video-title">
+                    精彩视频
+                </div>
+                
+                <div class="video-iframe">
+                    <iframe 
+                        src="//player.bilibili.com/player.html?bvid=BV1oSnqzKEbM&page=1&t=532" 
+                        scrolling="no" 
+                        frameborder="no" 
+                        allowfullscreen="true">
+                    </iframe>
+                </div>
+                
+                <div class="video-links">
+                    <a href="https://www.bilibili.com/video/BV1oSnqzKEbM?t=532.2" 
+                       target="_blank" 
+                       class="video-link-btn">
+                        📺 在B站观看
+                    </a>
+                    <button onclick="copyLink()" class="video-link-btn" style="border: none; cursor: pointer;">
+                        🔗 复制链接
+                    </button>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="section-title">
+                    核心投资观点
+                </div>
+                
+                <div class="viewpoint">
+                    <span class="viewpoint-label">A.</span>
+                    <strong>AI泡沫刚刚开始</strong> — 当前市场对AI的认知和投资仍处于早期阶段，真正的价值释放周期才刚刚开启。
+                </div>
+                
+                <div class="viewpoint">
+                    <span class="viewpoint-label">B.</span>
+                    <strong>算力是主线</strong> — 算力基础设施是AI时代的核心资产，芯片、数据中心等领域值得长期关注。
+                </div>
+                
+                <div class="viewpoint">
+                    <span class="viewpoint-label">C.</span>
+                    <strong>能源或有机会，核电不可错过</strong> — AI算力需求带动能源消耗激增，清洁高效的核电将成为关键支撑。
+                </div>
+            </div>
+            
+            <div class="author-section">
+                <div class="author-info">
+                    <div class="author-avatar">邱</div>
+                    <div class="author-details">
+                        <h3>邱东</h3>
+                        <p>投资观察者 · 科技趋势分析</p>
+                    </div>
+                </div>
+                
+                <div class="share-section">
+                    <button onclick="shareToWeChat()" class="share-btn">
+                        分享给好友
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📍 分享此页面：复制当前网址发送给好友即可</p>
+            <p style="margin-top: 10px; opacity: 0.7;">
+                Powered by GitHub Pages · 2025
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function copyLink() {
+            const link = 'https://www.bilibili.com/video/BV1oSnqzKEbM?t=532.2';
+            navigator.clipboard.writeText(link).then(() => {
+                showNotification();
+            }).catch(err => {
+                alert('链接：' + link);
+            });
+        }
+        
+        function shareToWeChat() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('✅ 网页链接已复制！\n\n请粘贴到微信/QQ发送给好友。');
+            }).catch(err => {
+                alert('请复制此链接分享：\n' + url);
+            });
+        }
+        
+        function showNotification() {
+            const notification = document.getElementById('copyNotification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
